@@ -102,6 +102,32 @@ countSmileys([";]", ":[", ";*", ":)", ";-D"]);
 
 //7kyu
 
+// In this kata your task is to remove all the duplicates from the array using a standart build-in method - Array.prototype.filter(); return the array containing unique values only.
+
+// Tip: use the index of value(s) to solve this kata
+
+// If you are not familiar with filter() - info is here:
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+function unique(arr) {
+  const q = new Set(arr);
+  let x = [];
+  for (let char of q) {
+    x.push(char);
+  }
+  return x.sort();
+}
+// For example:
+
+// var arr = [4];
+
+// unique(arr); // should return [4]
+
+// var arr = [1,1,1,2,2,3];
+
+// unique(arr); // should return [1,2,3]
+
 // Given a string of digits confirm whether the sum of all the individual even digits are greater than the sum of all the indiviudal odd digits. Always a string of numbers will be given.
 
 // If the sum of even numbers is greater than the odd numbers return: "Even is greater than Odd"
