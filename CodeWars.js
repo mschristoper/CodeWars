@@ -277,6 +277,86 @@ function stray(numbers) {
 
 //8kyu
 
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// i.e.
+function friend(friends) {
+  //your code here
+  let shouldBe = [];
+  for (let char of friends) {
+    char.length === 4 ? shouldBe.push(char) : true;
+  }
+  return shouldBe;
+}
+friend[("Ryan", "Kieran", "Mark")]`shouldBe`[("Ryan", "Mark")];
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// Examples input/output:
+function XO(str) {
+  let str1 = str.toLowerCase();
+  let arrX = [];
+  let arrO = [];
+  for (let x of str1) {
+    if (x == "x" || x == "o") {
+      x == "x" ? arrX.push(x) : arrO.push(x);
+    }
+  }
+  return arrX.length === arrO.length;
+}
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+// Introduction
+// The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc.
+
+// Task :
+// Given a year, return the century it is in.
+
+function century(year) {
+  // Finish this :)
+  return Math.ceil(year / 100);
+}
+
+// Input , Output Examples :
+// 1705 --> 18
+// 1900 --> 19
+// 1601 --> 17
+// 2000 --> 20
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+function invert(array) {
+  let array1 = [];
+  for (let number of array) {
+    Number(number) > 0
+      ? array1.push(-+Number(number))
+      : array1.push(Number(number) * -1);
+  }
+  return array1;
+}
+
+console.log(invert([-1, -2, -3, -4, -5]));
+invert([1, 2, 3, 4, 5]) == [-1, -2, -3, -4, -5];
+invert([1, -2, 3, -4, 5]) == [-1, 2, -3, 4, -5];
+invert([]) == [];
+// Very simple, given a number, find its opposite.
+
+// Examples:
+
+function opposite(number) {
+  return -+number;
+}
+
+// 1: -1
+// 14: -14
+// -34: 34
+
 function multiply(a, b) {
   return a * b;
 }
